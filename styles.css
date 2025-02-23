@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0a0a23, #1a1a4d);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+}
+
+.intro-container {
+    text-align: center;
+    color: white;
+    animation: glow 2s infinite alternate;
+}
+
+h1 {
+    font-size: 3rem;
+    color: cyan;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    margin-bottom: 20px;
+}
+
+.instructions {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.credits {
+    font-size: 1.2rem;
+    color: #ffaa00;
+    text-shadow: 0 0 5px #ffaa00;
+    margin-bottom: 30px;
+}
+
+#startButton {
+    padding: 15px 30px;
+    font-size: 1.8rem;
+    color: #00ff00;
+    background: none;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 0 10px #00ff00;
+    animation: pulse 1.5s infinite;
+    font-family: 'Orbitron', sans-serif;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px white; }
+    100% { text-shadow: 0 0 15px white; }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    .instructions { font-size: 1rem; }
+    .credits { font-size: 0.9rem; }
+    #startButton { font-size: 1.2rem; padding: 10px 20px; }
+}
